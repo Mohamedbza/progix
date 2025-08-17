@@ -1,7 +1,7 @@
 # CLAUDE.md - Project Documentation
 
 ## Project Overview
-**Projix** is a modern Next.js 15 application built with TypeScript, Tailwind CSS, and Framer Motion. The project uses the App Router architecture and includes comprehensive Docker support with CI/CD automation.
+**Projix** is a modern Next.js 15 application built with TypeScript, Tailwind CSS, and Framer Motion. The project uses the App Router architecture with automated CI/CD for continuous integration.
 
 ## Technology Stack
 - **Framework**: Next.js 15.4.6 with App Router
@@ -40,21 +40,6 @@ npm run build
 npm start
 ```
 
-## Docker Commands
-```bash
-# Build Docker image
-docker build -t projix .
-
-# Run container locally
-docker run -p 3000:3000 projix
-
-# Build with specific tag
-docker build -t ghcr.io/your-username/projix:latest .
-
-# Push to GitHub Container Registry
-docker push ghcr.io/your-username/projix:latest
-```
-
 ## CI/CD Pipeline
 The project uses GitHub Actions with the following workflow:
 
@@ -63,15 +48,9 @@ The project uses GitHub Actions with the following workflow:
 - Dependencies installation (`npm ci`)
 - TypeScript type checking
 - ESLint linting
+- Prettier format checking
 - Test execution (if tests exist)
 - Next.js build
-
-### Docker Publishing Job
-- Runs after successful build/test
-- Builds multi-stage Docker image
-- Pushes to GitHub Container Registry (GHCR)
-- Uses GitHub Actions cache for faster builds
-- Automatically tags with branch, SHA, and semver tags
 
 ## Git Workflow
 ```bash
@@ -85,8 +64,8 @@ git commit -m "feat: your feature description"
 # Push to remote
 git push origin feature/your-feature-name
 
-# Create pull request (triggers CI/CD)
-# Merge to main (triggers production deployment)
+# Create pull request (triggers CI)
+# Merge to main (runs full CI pipeline)
 ```
 
 ## Project Structure
@@ -104,7 +83,6 @@ projix/
 ├── .github/
 │   └── workflows/
 │       └── cicd.yml       # CI/CD pipeline
-├── Dockerfile             # Multi-stage Docker build
 ├── next.config.ts         # Next.js configuration
 ├── tailwind.config.js     # Tailwind CSS config
 ├── tsconfig.json          # TypeScript config
@@ -115,16 +93,15 @@ projix/
 
 ## Environment Configuration
 - **Development**: `npm run dev` on http://localhost:3000
-- **Production**: Standalone output for Docker deployment
-- **Container**: Runs on port 3000 with non-root user (nextjs:1001)
+- **Production**: Optimized build with `npm run build`
+- **Port**: Default 3000 for both development and production
 
 ## Key Features
 - **Modern Stack**: Latest Next.js 15 with React 19
 - **Performance**: Turbopack for fast development builds
-- **Security**: Non-root Docker container, minimal permissions
-- **Automation**: Full CI/CD pipeline with Docker publishing
+- **Automation**: Full CI pipeline for continuous integration
 - **Code Quality**: ESLint, Prettier, TypeScript strict mode
-- **Deployment Ready**: Standalone output for containerized deployment
+- **Deployment Ready**: Optimized production builds
 
 ## Useful Commands for Claude
 - **Lint Check**: `npm run lint`

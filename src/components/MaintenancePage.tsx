@@ -6,16 +6,29 @@ import { motion } from 'framer-motion';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { assets } from '@/config/assets';
 import { colors } from '@/config/colors';
-import { MdEmail, MdPhone } from 'react-icons/md';
-import { FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import { FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { Squares } from '@/components/ui/squares-background';
 
 const MaintenancePage = () => {
   return (
     <div 
-      className="h-screen bg-white flex flex-col items-center justify-between overflow-hidden"
+      className="h-screen relative overflow-hidden"
       style={{ fontFamily: 'var(--font-montserrat)' }}
     >
-      <div className="flex flex-col items-center justify-between h-full px-4 sm:px-6 lg:px-8 py-8">
+      {/* Squares Background */}
+      <div className="absolute inset-0 z-0">
+        <Squares 
+          direction="diagonal"
+          speed={0.3}
+          squareSize={60}
+          borderColor="#e2e8f0"
+          hoverFillColor="#4fa3d1"
+        />
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-between h-full px-4 sm:px-6 lg:px-8 py-8">
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +76,7 @@ const MaintenancePage = () => {
           {/* Coming Soon Badge */}
           <div className="flex justify-center">
             <div 
-              className="px-5 py-2 rounded-full border-2 inline-flex items-center bg-white shadow-sm"
+              className="px-6 py-3 rounded-full border-2 inline-flex items-center bg-white/90 backdrop-blur-sm shadow-lg"
               style={{ 
                 borderColor: colors.secondary
               }}
@@ -78,8 +91,8 @@ const MaintenancePage = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-            <div className="flex items-center space-x-2 bg-gray-50 px-3 py-2 rounded-lg shadow-sm border">
+          <div className="flex justify-center">
+            <div className="flex items-center space-x-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg border border-gray-200">
               <MdEmail 
                 size={16} 
                 style={{ color: colors.secondary }} 
@@ -88,19 +101,7 @@ const MaintenancePage = () => {
                 className="text-xs sm:text-sm font-medium"
                 style={{ color: colors.tertiary }}
               >
-                contact@projix.com
-              </span>
-            </div>
-            <div className="flex items-center space-x-2 bg-gray-50 px-3 py-2 rounded-lg shadow-sm border">
-              <MdPhone 
-                size={16} 
-                style={{ color: colors.secondary }} 
-              />
-              <span 
-                className="text-xs sm:text-sm font-medium"
-                style={{ color: colors.tertiary }}
-              >
-                +1 (514) 123-4567
+                contact@progix.com
               </span>
             </div>
           </div>
@@ -108,21 +109,12 @@ const MaintenancePage = () => {
 
         {/* Social Media Icons - Bottom */}
         <div className="flex justify-center pb-4">
-          <div className="flex space-x-3">
+          <div className="flex space-x-3 bg-white/80 backdrop-blur-sm px-4 py-3 rounded-full shadow-lg">
             <a 
-              href="#" 
-              className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:opacity-80 shadow-sm"
-              style={{ backgroundColor: colors.secondary }}
-              aria-label="Follow us on Twitter"
-            >
-              <FaTwitter 
-                size={16} 
-                style={{ color: colors.white }} 
-              />
-            </a>
-            <a 
-              href="#" 
-              className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:opacity-80 shadow-sm"
+              href="https://www.linkedin.com/company/progix-inc" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:opacity-80"
               style={{ backgroundColor: colors.secondary }}
               aria-label="Connect with us on LinkedIn"
             >
@@ -133,11 +125,11 @@ const MaintenancePage = () => {
             </a>
             <a 
               href="#" 
-              className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:opacity-80 shadow-sm"
+              className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:opacity-80"
               style={{ backgroundColor: colors.secondary }}
-              aria-label="Follow us on Instagram"
+              aria-label="Subscribe to our YouTube channel"
             >
-              <FaInstagram 
+              <FaYoutube 
                 size={16} 
                 style={{ color: colors.white }} 
               />

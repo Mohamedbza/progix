@@ -1,26 +1,24 @@
 # Projix
 
-A modern Next.js 15 application built with TypeScript, Tailwind CSS, and Framer Motion. Features comprehensive Docker support and automated CI/CD pipeline.
+A modern Next.js 15 application built with TypeScript, Tailwind CSS, and Framer Motion. Features automated CI/CD pipeline for continuous integration and deployment.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 - Node.js 22+ 
 - npm or yarn
-- Docker (for containerization)
 - Git
 
 ### Local Development
 
-1. **Clone the repository**
+1. **Clone the repository progix**
    ```bash
-   git clone <repository-url>
-   cd projix
-   ```
+   git clone git@github.com:DigitariaWebs/progix.git
+   cd progix
 
 2. **Install dependencies**
    ```bash
-   npm ci
+   npm install
    ```
 
 3. **Start development server**
@@ -42,67 +40,25 @@ A modern Next.js 15 application built with TypeScript, Tailwind CSS, and Framer 
 | `npm run format` | Format code with Prettier |
 | `npm run format:check` | Check code formatting |
 
-## 🐳 Docker Deployment
-
-### Build and Run Locally
-
-```bash
-# Build the Docker image
-docker build -t projix .
-
-# Run the container
-docker run -p 3000:3000 projix
-```
-
-### Production Deployment
-
-The application uses a multi-stage Docker build for optimal production deployment:
-
-1. **Dependencies stage**: Installs npm packages
-2. **Build stage**: Compiles the Next.js application  
-3. **Runtime stage**: Runs the standalone application with non-root user
-
-```bash
-# Build with production tag
-docker build -t ghcr.io/your-username/projix:latest .
-
-# Push to registry
-docker push ghcr.io/your-username/projix:latest
-```
-
 ## 🔄 CI/CD Pipeline
 
 ### Automated Workflow
 
 The project includes a comprehensive GitHub Actions workflow (`.github/workflows/cicd.yml`) that:
 
-1. **Build & Test Job**:
+**Build & Test Job**:
    - Sets up Node.js 22 with npm cache
    - Installs dependencies with `npm ci`
    - Runs TypeScript type checking
    - Executes ESLint linting
+   - Checks code formatting with Prettier
    - Runs tests (if present)
    - Builds the Next.js application
 
-2. **Docker Publishing Job**:
-   - Builds multi-stage Docker image
-   - Publishes to GitHub Container Registry (GHCR)
-   - Uses build cache for faster builds
-   - Auto-tags with branch, SHA, and semantic versions
+### Triggering Builds
 
-### Triggering Deployments
-
-- **Push to `main`**: Triggers full CI/CD pipeline
+- **Push to `main`**: Triggers full CI pipeline
 - **Pull Requests**: Runs build and test validation
-- **Manual**: Workflow can be triggered manually from GitHub Actions
-
-### Environment Setup
-
-To enable the CI/CD pipeline:
-
-1. Ensure your repository has access to GitHub Container Registry
-2. The workflow uses `GITHUB_TOKEN` (automatically provided)
-3. No additional secrets configuration required
 
 ## 📁 Project Structure
 
@@ -120,7 +76,6 @@ projix/
 ├── .github/
 │   └── workflows/
 │       └── cicd.yml     # CI/CD pipeline configuration
-├── Dockerfile           # Multi-stage Docker build
 ├── next.config.ts       # Next.js configuration
 ├── tailwind.config.js   # Tailwind CSS configuration
 ├── tsconfig.json        # TypeScript configuration
@@ -138,8 +93,7 @@ projix/
 - **Development**: Turbopack for fast builds
 - **Linting**: ESLint 9 with Next.js configuration
 - **Formatting**: Prettier 3.6.2 with Tailwind plugin
-- **Containerization**: Docker with multi-stage builds
-- **CI/CD**: GitHub Actions with GHCR publishing
+- **CI/CD**: GitHub Actions for continuous integration
 
 ## 🔧 Development Workflow
 
@@ -177,35 +131,31 @@ npm run lint
 
 ## 🚀 Deployment Options
 
-### 1. GitHub Container Registry (Recommended)
-Automatic deployment via GitHub Actions to GHCR:
-```bash
-# Images are automatically built and pushed on main branch
-ghcr.io/your-username/projix:main
-ghcr.io/your-username/projix:sha-<commit-hash>
-```
+The Next.js application can be deployed to various platforms:
 
-### 2. Manual Docker Deployment
-```bash
-# Build and run locally
-docker build -t projix .
-docker run -p 3000:3000 projix
-```
+### Static Site Hosting
+- **Vercel** (Recommended for Next.js)
+- **Netlify**
+- **GitHub Pages** (for static exports)
+- **Cloudflare Pages**
 
-### 3. Cloud Platforms
-The standalone Docker image can be deployed to:
-- AWS ECS/EKS
-- Google Cloud Run
-- Azure Container Instances
-- DigitalOcean Apps
-- Railway, Fly.io, etc.
+### Node.js Hosting
+- **Railway**
+- **Render**
+- **Fly.io**
+- **Heroku**
+- **DigitalOcean App Platform**
+
+### Cloud Platforms
+- **AWS Amplify**
+- **Google Cloud Platform**
+- **Azure Static Web Apps**
 
 ## 📚 Learn More
 
 - [Next.js Documentation](https://nextjs.org/docs) - Next.js features and API
 - [Tailwind CSS](https://tailwindcss.com/docs) - Utility-first CSS framework
 - [Framer Motion](https://www.framer.com/motion/) - Animation library
-- [Docker Documentation](https://docs.docker.com/) - Containerization guide
 
 ## 🤝 Contributing
 
