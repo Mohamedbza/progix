@@ -1,6 +1,11 @@
 {
   "permissions": {
-    "allow": ["Bash(npm run type-check:*)", "Bash(rm:*)", "Bash(npm run lint)"],
+    "allow": [
+      "Bash(npm run type-check:*)",
+      "Bash(rm:*)",
+      "Bash(npm run lint)",
+      "WebSearch"
+    ],
     "deny": [],
     "ask": []
   }

@@ -112,6 +112,18 @@ projix/
 - **Code Quality**: ESLint, Prettier, TypeScript strict mode
 - **Deployment Ready**: Optimized production builds
 
+## Cloudflare Deployment
+
+The project is configured for deployment to Cloudflare Workers using @opennextjs/cloudflare adapter:
+
+- **wrangler.toml**: Cloudflare Workers configuration
+- **open-next.config.ts**: OpenNext adapter configuration
+- **deploy-cloudflare.yml**: GitHub Actions workflow for automatic deployment
+
+### Deployment Commands
+- **Preview**: `npm run preview` - Test locally with Cloudflare runtime
+- **Deploy**: `npm run deploy` - Deploy to Cloudflare Workers
+
 ## Useful Commands for Claude
 
 - **Lint Check**: `npm run lint`
@@ -119,3 +131,5 @@ projix/
 - **Format Check**: `npm run format:check`
 - **Build Test**: `npm run build`
 - **Dev Server**: `npm run dev`
+- **Cloudflare Preview**: `npm run preview`
+- **Cloudflare Deploy**: `npm run deploy`

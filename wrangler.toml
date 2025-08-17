@@ -1,0 +1,46 @@
+# Cloudflare Workers configuration for Next.js deployment
+name = "projix"
+compatibility_date = "2025-01-17"
+compatibility_flags = ["nodejs_compat"]
+
+# Main entry point for the worker
+main = ".open-next/worker.js"
+
+# Assets configuration
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+# Environment variables (add your production env vars here)
+[vars]
+# NEXT_PUBLIC_API_URL = "https://your-api.example.com"
+
+# Optional: Add bindings for KV, R2, Durable Objects, etc.
+# [[kv_namespaces]]
+# binding = "MY_KV"
+# id = "your-kv-namespace-id"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# Development configuration
+[env.development]
+name = "projix-dev"
+
+[env.development.vars]
+# Development-specific environment variables
+
+# Staging configuration
+[env.staging]
+name = "projix-staging"
+
+[env.staging.vars]
+# Staging-specific environment variables
+
+# Production configuration
+[env.production]
+name = "projix"
+
+[env.production.vars]
+# Production-specific environment variables

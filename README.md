@@ -140,30 +140,28 @@ npm run type-check
 npm run lint
 ```
 
-## 🚀 Deployment Options
+## 🚀 Deployment
 
-The Next.js application can be deployed to various platforms:
+### Cloudflare Workers (Recommended)
 
-### Static Site Hosting
+This project is configured for deployment to Cloudflare Workers using the @opennextjs/cloudflare adapter:
 
-- **Vercel** (Recommended for Next.js)
-- **Netlify**
-- **GitHub Pages** (for static exports)
-- **Cloudflare Pages**
+```bash
+# Preview locally with Cloudflare runtime
+npm run preview
 
-### Node.js Hosting
+# Deploy to Cloudflare Workers
+npm run deploy
+```
 
-- **Railway**
-- **Render**
-- **Fly.io**
-- **Heroku**
-- **DigitalOcean App Platform**
+See [CLOUDFLARE_DEPLOYMENT.md](./CLOUDFLARE_DEPLOYMENT.md) for detailed setup instructions.
 
-### Cloud Platforms
+### Other Deployment Options
 
-- **AWS Amplify**
-- **Google Cloud Platform**
-- **Azure Static Web Apps**
+- **Vercel** - Native Next.js support
+- **Railway** - For backend services (planned)
+- **Netlify** - Alternative static hosting
+- **AWS Amplify** - Full-stack AWS deployment
 
 ## 📚 Learn More
 
