@@ -12,13 +12,13 @@ import { Squares } from '@/components/ui/squares-background';
 
 const MaintenancePage = () => {
   return (
-    <div 
+    <div
       className="h-screen relative overflow-hidden"
       style={{ fontFamily: 'var(--font-montserrat)' }}
     >
       {/* Squares Background */}
       <div className="absolute inset-0 z-0">
-        <Squares 
+        <Squares
           direction="diagonal"
           speed={0.3}
           squareSize={60}
@@ -26,7 +26,7 @@ const MaintenancePage = () => {
           hoverFillColor="#4fa3d1"
         />
       </div>
-      
+
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-between h-full px-4 sm:px-6 lg:px-8 py-8">
         <motion.div
@@ -35,15 +35,15 @@ const MaintenancePage = () => {
           transition={{
             delay: 0.3,
             duration: 0.8,
-            ease: "easeInOut",
+            ease: 'easeInOut',
           }}
           className="flex flex-col items-center justify-center flex-1 w-full max-w-3xl mx-auto text-center space-y-6"
         >
           {/* Logo */}
           <div className="flex justify-center">
-            <Image 
-              src={assets.logo} 
-              alt="Projix Logo" 
+            <Image
+              src={assets.logo}
+              alt="Projix Logo"
               width={120}
               height={120}
               className="h-20 w-auto sm:h-24 md:h-28"
@@ -65,7 +65,7 @@ const MaintenancePage = () => {
 
           {/* French Message Only */}
           <div>
-            <p 
+            <p
               className="text-base sm:text-lg md:text-xl italic font-light leading-relaxed max-w-2xl"
               style={{ color: colors.primary }}
             >
@@ -75,13 +75,13 @@ const MaintenancePage = () => {
 
           {/* Coming Soon Badge */}
           <div className="flex justify-center">
-            <div 
+            <div
               className="px-6 py-3 rounded-full border-2 inline-flex items-center bg-white/90 backdrop-blur-sm shadow-lg"
-              style={{ 
-                borderColor: colors.secondary
+              style={{
+                borderColor: colors.secondary,
               }}
             >
-              <span 
+              <span
                 className="font-medium text-xs sm:text-sm tracking-wide"
                 style={{ color: colors.secondary }}
               >
@@ -93,11 +93,8 @@ const MaintenancePage = () => {
           {/* Contact Information */}
           <div className="flex justify-center">
             <div className="flex items-center space-x-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg border border-gray-200">
-              <MdEmail 
-                size={16} 
-                style={{ color: colors.secondary }} 
-              />
-              <span 
+              <MdEmail size={16} style={{ color: colors.secondary }} />
+              <span
                 className="text-xs sm:text-sm font-medium"
                 style={{ color: colors.tertiary }}
               >
@@ -110,29 +107,23 @@ const MaintenancePage = () => {
         {/* Social Media Icons - Bottom */}
         <div className="flex justify-center pb-4">
           <div className="flex space-x-3 bg-white/80 backdrop-blur-sm px-4 py-3 rounded-full shadow-lg">
-            <a 
-              href="https://www.linkedin.com/company/progix-inc" 
+            <a
+              href="https://www.linkedin.com/company/progix-inc"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:opacity-80"
               style={{ backgroundColor: colors.secondary }}
               aria-label="Connect with us on LinkedIn"
             >
-              <FaLinkedin 
-                size={16} 
-                style={{ color: colors.white }} 
-              />
+              <FaLinkedin size={16} style={{ color: colors.white }} />
             </a>
-            <a 
-              href="#" 
+            <a
+              href="#"
               className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:opacity-80"
               style={{ backgroundColor: colors.secondary }}
               aria-label="Subscribe to our YouTube channel"
             >
-              <FaYoutube 
-                size={16} 
-                style={{ color: colors.white }} 
-              />
+              <FaYoutube size={16} style={{ color: colors.white }} />
             </a>
           </div>
         </div>

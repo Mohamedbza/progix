@@ -1,9 +1,11 @@
 # CLAUDE.md - Project Documentation
 
 ## Project Overview
+
 **Projix** is a modern Next.js 15 application built with TypeScript, Tailwind CSS, and Framer Motion. The project uses the App Router architecture with automated CI/CD for continuous integration.
 
 ## Technology Stack
+
 - **Framework**: Next.js 15.4.6 with App Router
 - **Runtime**: React 19.1.0
 - **Language**: TypeScript 5
@@ -14,6 +16,7 @@
 - **Formatting**: Prettier 3.6.2 with Tailwind plugin
 
 ## Development Setup Commands
+
 ```bash
 # Install dependencies
 npm ci
@@ -41,9 +44,11 @@ npm start
 ```
 
 ## CI/CD Pipeline
+
 The project uses GitHub Actions with the following workflow:
 
 ### Build & Test Job
+
 - Node.js 22 setup with npm cache
 - Dependencies installation (`npm ci`)
 - TypeScript type checking
@@ -53,6 +58,7 @@ The project uses GitHub Actions with the following workflow:
 - Next.js build
 
 ## Git Workflow
+
 ```bash
 # Create feature branch
 git checkout -b feature/your-feature-name
@@ -69,6 +75,7 @@ git push origin feature/your-feature-name
 ```
 
 ## Project Structure
+
 ```
 projix/
 ├── src/
@@ -92,11 +99,13 @@ projix/
 ```
 
 ## Environment Configuration
+
 - **Development**: `npm run dev` on http://localhost:3000
 - **Production**: Optimized build with `npm run build`
 - **Port**: Default 3000 for both development and production
 
 ## Key Features
+
 - **Modern Stack**: Latest Next.js 15 with React 19
 - **Performance**: Turbopack for fast development builds
 - **Automation**: Full CI pipeline for continuous integration
@@ -104,8 +113,9 @@ projix/
 - **Deployment Ready**: Optimized production builds
 
 ## Useful Commands for Claude
+
 - **Lint Check**: `npm run lint`
-- **Type Check**: `npm run type-check` 
+- **Type Check**: `npm run type-check`
 - **Format Check**: `npm run format:check`
 - **Build Test**: `npm run build`
 - **Dev Server**: `npm run dev`

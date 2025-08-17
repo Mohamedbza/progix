@@ -1,6 +1,5 @@
 {
-  "scripts": {
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
-  }
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "all"
 }

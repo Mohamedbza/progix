@@ -5,40 +5,46 @@ A modern Next.js 15 application built with TypeScript, Tailwind CSS, and Framer 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 22+ 
+
+- Node.js 22+
 - npm or yarn
 - Git
 
 ### Local Development
 
 1. **Clone the repository progix**
+
    ```bash
    git clone git@github.com:DigitariaWebs/progix.git
    cd progix
 
+   ```
+
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Start development server**
+
    ```bash
    npm run dev
    ```
-   
+
    Open [http://localhost:3000](http://localhost:3000) to view the application.
 
 ### Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server with Turbopack |
-| `npm run build` | Build for production |
-| `npm start` | Start production server |
-| `npm run lint` | Run ESLint |
-| `npm run type-check` | Run TypeScript type checking |
-| `npm run format` | Format code with Prettier |
-| `npm run format:check` | Check code formatting |
+| Command                | Description                             |
+| ---------------------- | --------------------------------------- |
+| `npm run dev`          | Start development server with Turbopack |
+| `npm run build`        | Build for production                    |
+| `npm start`            | Start production server                 |
+| `npm run lint`         | Run ESLint                              |
+| `npm run type-check`   | Run TypeScript type checking            |
+| `npm run format`       | Format code with Prettier               |
+| `npm run format:check` | Check code formatting                   |
 
 ## 🔄 CI/CD Pipeline
 
@@ -47,13 +53,14 @@ A modern Next.js 15 application built with TypeScript, Tailwind CSS, and Framer 
 The project includes a comprehensive GitHub Actions workflow (`.github/workflows/cicd.yml`) that:
 
 **Build & Test Job**:
-   - Sets up Node.js 22 with npm cache
-   - Installs dependencies with `npm ci`
-   - Runs TypeScript type checking
-   - Executes ESLint linting
-   - Checks code formatting with Prettier
-   - Runs tests (if present)
-   - Builds the Next.js application
+
+- Sets up Node.js 22 with npm cache
+- Installs dependencies with `npm ci`
+- Runs TypeScript type checking
+- Executes ESLint linting
+- Checks code formatting with Prettier
+- Runs tests (if present)
+- Builds the Next.js application
 
 ### Triggering Builds
 
@@ -98,6 +105,7 @@ projix/
 ## 🔧 Development Workflow
 
 ### Branch Strategy
+
 ```bash
 # Create feature branch
 git checkout -b feature/your-feature-name
@@ -111,13 +119,16 @@ git push origin feature/your-feature-name
 ```
 
 ### Code Quality
+
 The project enforces code quality through:
+
 - **TypeScript**: Strict type checking
 - **ESLint**: Code linting with Next.js rules
 - **Prettier**: Automatic code formatting
 - **Pre-commit hooks**: Automated quality checks
 
 ### Testing
+
 ```bash
 # Run tests (when available)
 npm test
@@ -134,12 +145,14 @@ npm run lint
 The Next.js application can be deployed to various platforms:
 
 ### Static Site Hosting
+
 - **Vercel** (Recommended for Next.js)
 - **Netlify**
 - **GitHub Pages** (for static exports)
 - **Cloudflare Pages**
 
 ### Node.js Hosting
+
 - **Railway**
 - **Render**
 - **Fly.io**
@@ -147,6 +160,7 @@ The Next.js application can be deployed to various platforms:
 - **DigitalOcean App Platform**
 
 ### Cloud Platforms
+
 - **AWS Amplify**
 - **Google Cloud Platform**
 - **Azure Static Web Apps**

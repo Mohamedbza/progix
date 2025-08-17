@@ -1,9 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  
+
   /* Aurora Background Variables */
   --white: #ffffff;
   --black: #000000;
@@ -20,7 +20,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-montserrat);
   --font-mono: var(--font-geist-mono);
-  
+
   /* Aurora Animation */
   --animate-aurora: aurora 60s linear infinite;
 }
@@ -28,10 +28,14 @@
 /* Aurora Keyframes */
 @keyframes aurora {
   from {
-    background-position: 50% 50%, 50% 50%;
+    background-position:
+      50% 50%,
+      50% 50%;
   }
   to {
-    background-position: 350% 50%, 350% 50%;
+    background-position:
+      350% 50%,
+      350% 50%;
   }
 }
 
