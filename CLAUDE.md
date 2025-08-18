@@ -112,17 +112,18 @@ projix/
 - **Code Quality**: ESLint, Prettier, TypeScript strict mode
 - **Deployment Ready**: Optimized production builds
 
-## Cloudflare Deployment
+## Vercel Deployment
 
-The project is configured for deployment to Cloudflare Workers using @opennextjs/cloudflare adapter:
+The project is optimized for deployment on Vercel with automatic CI/CD:
 
-- **wrangler.toml**: Cloudflare Workers configuration
-- **open-next.config.ts**: OpenNext adapter configuration
-- **deploy-cloudflare.yml**: GitHub Actions workflow for automatic deployment
+- **vercel.json**: Vercel configuration
+- **vercel-deploy.yml**: Production deployment workflow
+- **vercel-preview.yml**: Preview deployment workflow
 
-### Deployment Commands
-- **Preview**: `npm run preview` - Test locally with Cloudflare runtime
-- **Deploy**: `npm run deploy` - Deploy to Cloudflare Workers
+### Deployment
+- **Automatic**: Push to main branch triggers production deployment
+- **Preview**: Pull requests get automatic preview deployments
+- **Manual**: Use Vercel CLI with `vercel --prod`
 
 ## Useful Commands for Claude
 
@@ -131,5 +132,3 @@ The project is configured for deployment to Cloudflare Workers using @opennextjs
 - **Format Check**: `npm run format:check`
 - **Build Test**: `npm run build`
 - **Dev Server**: `npm run dev`
-- **Cloudflare Preview**: `npm run preview`
-- **Cloudflare Deploy**: `npm run deploy`

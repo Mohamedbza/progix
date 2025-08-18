@@ -142,26 +142,26 @@ npm run lint
 
 ## 🚀 Deployment
 
-### Cloudflare Workers (Recommended)
+### Vercel (Recommended)
 
-This project is configured for deployment to Cloudflare Workers using the @opennextjs/cloudflare adapter:
+This project is optimized for deployment on Vercel:
 
-```bash
-# Preview locally with Cloudflare runtime
-npm run preview
+**Quick Deploy:**
+1. Import your GitHub repository on [Vercel](https://vercel.com/new)
+2. Vercel auto-detects Next.js and configures everything
+3. Click "Deploy"
 
-# Deploy to Cloudflare Workers
-npm run deploy
-```
-
-See [CLOUDFLARE_DEPLOYMENT.md](./CLOUDFLARE_DEPLOYMENT.md) for detailed setup instructions.
+**GitHub Actions CI/CD:**
+- Production deployments on push to `main`
+- Preview deployments for pull requests
+- See [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md) for detailed setup
 
 ### Other Deployment Options
 
-- **Vercel** - Native Next.js support
 - **Railway** - For backend services (planned)
-- **Netlify** - Alternative static hosting
+- **Netlify** - Alternative hosting
 - **AWS Amplify** - Full-stack AWS deployment
+- **Cloudflare Pages** - Edge deployment
 
 ## 📚 Learn More
 
