@@ -5,7 +5,9 @@
       "Bash(rm:*)",
       "Bash(npm run lint)",
       "WebSearch",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(npm install)",
+      "Bash(npm ci:*)"
     ],
     "deny": [],
     "ask": []
