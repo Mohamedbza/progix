@@ -121,6 +121,7 @@ The project is optimized for deployment on Vercel with automatic CI/CD:
 - **vercel-preview.yml**: Preview deployment workflow
 
 ### Deployment
+
 - **Automatic**: Push to main branch triggers production deployment
 - **Preview**: Pull requests get automatic preview deployments
 - **Manual**: Use Vercel CLI with `vercel --prod`

@@ -147,11 +147,13 @@ npm run lint
 This project is optimized for deployment on Vercel:
 
 **Quick Deploy:**
+
 1. Import your GitHub repository on [Vercel](https://vercel.com/new)
 2. Vercel auto-detects Next.js and configures everything
 3. Click "Deploy"
 
 **GitHub Actions CI/CD:**
+
 - Production deployments on push to `main`
 - Preview deployments for pull requests
 - See [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md) for detailed setup

@@ -25,14 +25,17 @@ That's it! Vercel will automatically deploy on every push to `main`.
 #### Step 1: Get Vercel Credentials
 
 1. **Install Vercel CLI** (if not installed):
+
    ```bash
    npm i -g vercel
    ```
 
 2. **Link your project**:
+
    ```bash
    vercel link
    ```
+
    Follow the prompts to create or link to an existing Vercel project.
 
 3. **Get your credentials**:
@@ -49,6 +52,7 @@ That's it! Vercel will automatically deploy on every push to `main`.
 #### Step 2: Configure GitHub Secrets
 
 Add these secrets to your GitHub repository:
+
 1. Go to Settings → Secrets and variables → Actions
 2. Add the following secrets:
    - `VERCEL_TOKEN` - Your Vercel token
@@ -82,6 +86,7 @@ The repository includes two GitHub Actions workflows:
 ### Local Development
 
 Create a `.env.local` file:
+
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:3001
 # Add other environment variables
@@ -145,6 +150,7 @@ vercel
 ### DNS Configuration
 
 For `example.com`:
+
 - **A Record**: `76.76.21.21`
 - **CNAME** (www): `cname.vercel-dns.com`
 
@@ -163,6 +169,7 @@ For `example.com`:
 ### Next.js Optimizations
 
 Vercel automatically optimizes:
+
 - Image optimization
 - Font optimization
 - Script optimization
@@ -243,6 +250,7 @@ If something goes wrong:
 - **Enterprise**: Custom pricing
 
 Free tier includes:
+
 - Unlimited deployments
 - 100GB bandwidth/month
 - Automatic HTTPS
