@@ -118,7 +118,7 @@ const MaintenancePage = () => {
               <FaLinkedin size={16} style={{ color: colors.white }} />
             </a>
             <a
-              href="#"
+              href="https://www.youtube.com/@Digitaria_Web"
               className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:opacity-80"
               style={{ backgroundColor: colors.secondary }}
               aria-label="Subscribe to our YouTube channel"
